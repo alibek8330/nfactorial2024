@@ -3,7 +3,7 @@ async function get_starship() {
     newsContainer.innerHTML = ''; 
     try {
         for (let i = 1; i < 5; i++) {
-            const response = await axios.get(`http://swapi.dev/api/starships/?page=${i}&format=json`);
+            const response = await axios.get(`https://swapi.dev/api/starships/?page=${i}&format=json`);
             displayArticles5(response.data.results);
         }
     } catch (error) {
