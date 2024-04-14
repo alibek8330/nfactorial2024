@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/png/icon.png" type="x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/scripts/starships.js"></script>
+    <script src="/scripts/vehicles.js"></script>
+    <script src="/scripts/species.js"></script>
+    <script src="/scripts/planets.js"></script>
+    <script src="/scripts/people.js"></script>
+    <script src="/scripts/films.js"></script>
+    <script src="/scripts/allsearch.js"></script>
+</head>
+<body>
+    <video autoplay muted loop id="video">
+        <source src="/png/background2.mp4" type="video/mp4">
+        <script src="/scripts/script3.js"></script>
+    </video>
+    
+    <div class="header">
+        <div class="box1">
+            <a href="content-item.html" class="a-logo">
+                <img src="/png/star-wars-logo.png" alt="" class="logo" loading="lazy">
+            </a>
+        </div>
+        <div class="box2">
+            <div class="search-word">Search</div>
+            <form name="search" onsubmit="searchFunction(event)">
+                <input id="searchInput" class="input">
+            </form>
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+    <main>
+        <div class="deathstar">
+            <img src="/png/death-star.png" alt="" class="death-star">
+            <script src="https://unpkg.com/scrollreveal"></script>
+        </div>
+        <div class="container">
+            <div class="categories">
+                <a href="#" class="category" onclick="get_films()">Films</a>
+                <a href="#" class="category" onclick="get_person()">People</a>
+                <a href="#" class="category" onclick="get_planets()">Planets</a>
+                <a href="#" class="category" onclick="get_species()">Species</a>
+                <a href="#" class="category" onclick="get_starship()">Starships</a>
+                <a href="#" class="category" onclick="get_vehicle()">Vehicles</a>
+            </div>
+            
+            <div class="content" id = 'content'>
+                <div class="loading-indicator" id="loadingIndicator" style="font-size: 25px; color: white; font-family: Sixth">
+                    Loading...
+                </div>
+                <script>get_films()</script>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
