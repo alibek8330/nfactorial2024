@@ -3,7 +3,7 @@ async function get_planets() {
     newsContainer.innerHTML = ''; 
     try {
         for (let i = 1; i < 7; i++) {
-            const response = await axios.get(`http://swapi.dev/api/planets/?page=${i}&format=json`);
+            const response = await axios.get(`https://swapi.dev/api/planets/?page=${i}&format=json`);
             displayArticles3(response.data.results);
         }
     } catch (error) {
