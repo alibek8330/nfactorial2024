@@ -3,7 +3,7 @@ async function get_person() {
     newsContainer.innerHTML = ''; 
     try {
         for (let i = 1; i < 10; i++) {
-        const response = await axios.get(`http://swapi.dev/api/people/?page=${i}&format=json`)
+        const response = await axios.get(`https://swapi.dev/api/people/?page=${i}&format=json`)
         displayArticles2(response.data.results);
         }
     } catch (error) {
