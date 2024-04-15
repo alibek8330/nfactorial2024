@@ -2,7 +2,7 @@ async function get_films() {
     const newsContainer = document.getElementById('content');
     newsContainer.innerHTML = '';
     try {
-        const response = await axios.get(`http://swapi.dev/api/films/?format=json`);
+        const response = await axios.get(`https://swapi.dev/api/films/?format=json`);
         displayArticles1(response.data.results);
     } catch (error) {
         console.error('Error fetching:', error);
