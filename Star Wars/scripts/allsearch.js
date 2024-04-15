@@ -193,35 +193,35 @@ async function fetchSpecy(speciesUrls) {
 async function searchBySubstring(letter) {
     try {
         const responses = [];
-        const urls = ['http://swapi.dev/api/films/?format=json', 'http://swapi.dev/api/people/?format=json', 'http://swapi.dev/api/species/?format=json', 'http://swapi.dev/api/planets/?format=json', 'http://swapi.dev/api/starships/?format=json', 'http://swapi.dev/api/vehicles/?format=json'];
+        const urls = ['https://swapi.dev/api/films/?format=json', 'https://swapi.dev/api/people/?format=json', 'https://swapi.dev/api/species/?format=json', 'https://swapi.dev/api/planets/?format=json', 'https://swapi.dev/api/starships/?format=json', 'https://swapi.dev/api/vehicles/?format=json'];
         for (const url of urls) {
-            if ('http://swapi.dev/api/people/?format=json' === url){
+            if ('https://swapi.dev/api/people/?format=json' === url){
                 for (let i = 1; i < 10; i++) {
-                        const response = await axios.get(`http://swapi.dev/api/people/?page=${i}&format=json`);
+                        const response = await axios.get(`https://swapi.dev/api/people/?page=${i}&format=json`);
                         responses.push(...response.data.results);
                 }
             } 
-            else if ('http://swapi.dev/api/planets/?format=json' === url ){
+            else if ('https://swapi.dev/api/planets/?format=json' === url ){
                 for (let i = 1; i < 7; i++) {
-                    const response = await axios.get(`http://swapi.dev/api/planets/?page=${i}&format=json`);
+                    const response = await axios.get(`https://swapi.dev/api/planets/?page=${i}&format=json`);
                     responses.push(...response.data.results);
                 }
             }
-            else if ('http://swapi.dev/api/vehicles/?format=json' === url ){
+            else if ('https://swapi.dev/api/vehicles/?format=json' === url ){
                 for (let i = 1; i < 5; i++) {
-                    const response = await axios.get(`http://swapi.dev/api/vehicles/?page=${i}&format=json`);
+                    const response = await axios.get(`https://swapi.dev/api/vehicles/?page=${i}&format=json`);
                     responses.push(...response.data.results);
                 }
             }
-            else if ('http://swapi.dev/api/species/?format=json' === url ){
+            else if ('https://swapi.dev/api/species/?format=json' === url ){
                 for (let i = 1; i < 5; i++) {
-                    const response = await axios.get(`http://swapi.dev/api/species/?page=${i}&format=json`);
+                    const response = await axios.get(`https://swapi.dev/api/species/?page=${i}&format=json`);
                     responses.push(...response.data.results);
                 }
             }
-            else if ('http://swapi.dev/api/starships/?format=json' === url ){
+            else if ('https://swapi.dev/api/starships/?format=json' === url ){
                 for (let i = 1; i < 5; i++) {
-                    const response = await axios.get(`http://swapi.dev/api/starships/?page=${i}&format=json`);
+                    const response = await axios.get(`https://swapi.dev/api/starships/?page=${i}&format=json`);
                     responses.push(...response.data.results);
                 }
 
