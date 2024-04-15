@@ -3,7 +3,7 @@ async function get_vehicle() {
     newsContainer.innerHTML = ''; 
     try {
         for (let i = 1; i < 5; i++) {
-            const response = await axios.get(`https://swapi.dev/api/vehicles/?page=${i}&format=json`);
+            const response = await axios.get(`http://swapi.dev/api/vehicles/?page=${i}&format=json`);
             displayArticles6(response.data.results);
         }
     } catch (error) {
